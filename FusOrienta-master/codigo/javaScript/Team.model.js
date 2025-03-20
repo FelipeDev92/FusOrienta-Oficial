@@ -4,6 +4,7 @@ import { saveData, getData } from "./local-storage.js";
 
 const TEAM_KEY = "teams";
 
+// Divida as responsabilidades da classe. A classe gerencia tanto a criação e atualização de times quanto a associação de usuários.
 export default class TeamModel {
   constructor({ id, name, color, userId, description, meetings }) {
     this.id = id;
@@ -42,6 +43,8 @@ export default class TeamModel {
       });
   }
 
+// Este método lida tanto com a busca de times quanto com a obtenção de usuários associados.
+// Cada função deve ter apenas uma responsabilidade.
   static getAllTeamsMemberAndOwner() {
     const loggedUser = UserModel.getLoggedUser();
     const allTeams = TeamModel.getAll();
