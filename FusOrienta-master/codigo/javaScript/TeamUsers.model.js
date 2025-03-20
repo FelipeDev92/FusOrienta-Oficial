@@ -50,6 +50,7 @@ export default class TeamUsersModel {
       });
   }
 
+  // Essa função de criar nova relação entre usuário e time poderia estár em uma classe separada para diminuir o acoplamento.
   // Essa função cria um nova relação entre usuário e time
   create() {
     saveData(TEAM_KEY, [...TeamUsersModel.getAll(), this]);
