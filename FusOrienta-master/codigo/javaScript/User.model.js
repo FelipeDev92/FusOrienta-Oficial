@@ -4,6 +4,8 @@ import { getAvatarUrl } from "./mock/user.js";
 // Local onde é feito o CRUD
 const USER_KEY = "users";
 
+// O arquivo contém a classe User model e a autenticação de login.
+// Sugiro separar os arquivos para melhor organização e divisão de responsabilidades.
 export default class UserModel {
   constructor({
     id,
@@ -144,6 +146,9 @@ export default class UserModel {
       currency = countryData.currency;
     }
 
+// No arquivo também contém uma função/método para salvar os dados.
+// Sugiro criar um arquivo com classes DAO para persistir os dados.
+    
     saveData(
       USER_KEY,
       UserModel.getAll().map((user) => {
