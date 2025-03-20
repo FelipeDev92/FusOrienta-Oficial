@@ -11,6 +11,8 @@
   --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
 }
 
+
+// O arquivo contém muitos estilos diferentes, o que dificulta a manutenção. Seria ideal dividir os estilos em arquivos CSS menores, como header.css, footer.css, etc.
 body {
   font-family: "Barlow", sans-serif;
   color: var(--body);
@@ -561,6 +563,8 @@ form select {
   border-color: var(--brand);
 }
 
+
+// As regras do @media only screen and (max-width: 990px) poderiam estar em um arquivo responsive.css.
 @media only screen and (max-width: 990px) {
   .content-member {
     grid-template-columns: 1fr 1fr;
